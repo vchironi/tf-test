@@ -18,9 +18,10 @@ terraform {
     }
   }
 
+ }
 
 
-}
+
 
 
 # Variable blocks directly within the main.tf. No arguments necessary.
@@ -44,3 +45,6 @@ resource "aws_instance" "tc_instance" {
     Name = "TC-triggered-instance"
   }
 }
+ resource "aws_iam_user" "lb" {
+    name = "loadbalancer" 
+  }
